@@ -1,6 +1,6 @@
 <template>
   <div>
-    Module first
+    Module first hello
   </div>
 </template>
 
