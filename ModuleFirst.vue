@@ -1,12 +1,20 @@
 <template>
   <div>
-    Module first hello
+    test {{msg}}
   </div>
 </template>
 
-<script>
-export default {
-}
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name:'ModuleFirst',
+  props:{
+     msg: {
+      type: String,
+      required: true
+    }
+  }
+})
 </script>
 
 <style>
