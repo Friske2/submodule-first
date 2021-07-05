@@ -1,11 +1,12 @@
 <template>
   <div>
-    test {{msg}}
+    {{msg}} {{count}}
+    <button @click="handleEvent">count</button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { ref,defineComponent } from 'vue'
 export default defineComponent({
   name:'ModuleFirst',
   props:{
@@ -13,6 +14,13 @@ export default defineComponent({
       type: String,
       required: true
     }
+  },
+  setup:()=> {
+    let count = ref(0)
+    const handleEvent = ()=> {
+      count.value++
+    }
+    return { count,handleEvent }
   }
 })
 </script>
